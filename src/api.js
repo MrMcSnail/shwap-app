@@ -15,7 +15,6 @@ export function fetchAllCategories() {
 } 
 
 export function fetchItemsByCategory(category_name) {
-  console.log('category_name: ', category_name);
   return shwapApi.get(`/items?category_name=${category_name}`).then((res) => {
     return res.data.items;
   })
