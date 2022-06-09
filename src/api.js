@@ -6,4 +6,11 @@ export default function fetchAllItems() {
   return shwapApi.get('/items').then((res) => {
     return res.data.items;
   })
-} ;
+} 
+
+export default function fetchAllCategories() {
+  return shwapApi.get('/categories').then((res) => {
+    return res.data.categories;
+  })
+} 
+;
