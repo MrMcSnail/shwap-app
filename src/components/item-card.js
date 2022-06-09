@@ -1,6 +1,6 @@
 
 export default function ItemCard ({item_id, item_name, description, img_url, price, category_name}) {
-  return (<li key={item_id}>
+  return (<li >
     <h2>{item_name}</h2>
     <p>{description}</p>
     <img src={img_url} alt={item_name}/>

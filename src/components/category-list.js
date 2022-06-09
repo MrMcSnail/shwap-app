@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { fetchAllCategories } from "../api";
-import CategoryCard from "./categorycard";
+import CategoryCard from "./category-card";
 
 
-const Categories = () => {
+const CategoryList = () => {
   const [allCategories, setAllCategories] = useState([]);
 
   useEffect(() => {
@@ -14,10 +14,10 @@ const Categories = () => {
 
   const allCategoryCards = allCategories.map((categoryObj) => {
     const { category_name } = categoryObj;
-    return <CategoryCard category_name={category_name}/>;
+    return <CategoryCard key={category_name} category_name={category_name}/>;
   });
 
   return <ul className="CategoryList">{allCategoryCards}</ul>;
 };
 
-export default Categories;
+export default CategoryList;
