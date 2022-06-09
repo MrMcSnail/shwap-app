@@ -1,5 +1,5 @@
 import React from "react";
-import fetchAllItems from "../api";
+import { fetchAllItems } from "../api";
 import { useState, useEffect } from "react";
 import ItemCard from "./item-card";
 
