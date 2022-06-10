@@ -9,6 +9,7 @@ import CategoryList from "./components/category-list";
 import UserList from "./components/user-list";
 import { UserContext } from "./contexts/user";
 import { useState } from "react";
+import BasketList from "./components/basket-list";
 
 const superUberUser = {
 			"username": "xViolaine",
@@ -31,7 +32,7 @@ function App() {
           <Route path="/items/:category_name" element={<ItemList />} />
           <Route path="/sell" element={<SellItem />} />
           <Route path="/createuser" element={<CreateUser />} />
-          <Route path="/basket" element={<CreateUser />} />
+          <Route path="/basket" element={<BasketList />} />
         </Routes>
       </div>
       </UserContext.Provider>
