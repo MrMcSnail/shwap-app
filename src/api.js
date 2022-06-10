@@ -38,9 +38,7 @@ export function fetchAllUsers() {
   })
 } 
 
-export function patchKudos(body) {
-  return shwapApi.patch(`/users/${body.username}`, body.kudos_inc).then((res) => {
-    console.log(res)
-  })
+export function patchKudos({username, kudos_inc}) {
+  return shwapApi.patch(`/users/${username}`, {kudos_inc}).catch((err=>{console.log(err)}))
 }
 ;

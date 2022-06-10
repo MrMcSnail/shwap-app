@@ -14,7 +14,7 @@ const UserList = () => {
     const allUserCards = allUsers.map((userObj) => {
         const { username, avatar_url, kudos } = userObj;
 
-        return <UserCard key={username} username={username} avatar_url={avatar_url} kudos={kudos} />
+        return <UserCard key={username} username={username} avatar_url={avatar_url} kudos={kudos} user={userObj}/>
     })
 
     return <ul className="UserList">{allUserCards}</ul>
