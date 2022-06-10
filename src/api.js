@@ -19,4 +19,23 @@ export function fetchItemsByCategory(category_name) {
     return res.data.items;
   })
 } 
+
+export function sellItem(body) {
+  return shwapApi.post(`/items`, body).then((res) => {
+    return res.data.item;
+  })
+}
+
+export function createNewUser(body) {
+  return shwapApi.post(`/users`, body).then((res) => {
+    return res.data.user;
+  })
+} 
+
+export function fetchAllUsers() {
+  return shwapApi.get(`/users`).then((res) => {
+    return res.data.users;
+  })
+} 
+
 ;
