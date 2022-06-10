@@ -12,7 +12,6 @@ const SellItem = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log(event)
         sellItem(
             {
                 "item_name": itemName,
