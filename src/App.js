@@ -6,6 +6,8 @@ import ItemList from "./components/item-list";
 import SellItem from "./components/sell-item";
 import CreateUser from "./components/create-user";
 import CategoryList from "./components/category-list";
+import UserList from "./components/user-list";
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/categories" element={<CategoryList />} />
+          <Route path="/users" element={<UserList/>} />
           <Route path="/items" element={<ItemList />} />
           <Route path="/items/:category_name" element={<ItemList />} />
           <Route path="/sell" element={<SellItem />} />

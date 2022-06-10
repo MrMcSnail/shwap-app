@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { fetchAllUsers } from '../api';
-import { UserCard } from './user-card';
+import UserCard  from './user-card';
 
-const ShowUsers = () => {
+const UserList = () => {
     const [allUsers, setAllUsers] = useState([]);
 
     useEffect(() => {
@@ -20,4 +20,4 @@ const ShowUsers = () => {
     return <ul className="UserList">{allUserCards}</ul>
 };
 
-export default ShowUsers;
+export default UserList;
