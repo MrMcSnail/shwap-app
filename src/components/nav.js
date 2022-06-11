@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
+import { Tab, Tabs } from "@mui/material";
 
 const NavBar = () => {
     return (
-        <nav className="NavBar">
-            <Link to="/categories"><h2>Categories</ h2></Link>
-            <Link to="/users"><h2>Users</ h2></Link>
-            <Link to="/sell"><h2>Sell Item</h2></Link>
-            <Link to="/createuser"><h2>Create Userprofile</h2></Link>
-        </nav>
-    )
+			<Tabs className='NavBar' centered='true'>
+				<Tab label='Categories' href="/categories"/>
+				<Tab label='users' href="/users"/>
+                <Tab label='Sell Item' href="/sell" />
+				<Tab href='/createuser'
+				label="Create User Profile"/>
+			</Tabs>
+		);
 }
 
 export default NavBar;

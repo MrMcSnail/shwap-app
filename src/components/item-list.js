@@ -3,6 +3,7 @@ import { fetchAllItems, fetchItemsByCategory } from "../api";
 import { useState, useEffect } from "react";
 import ItemCard from "./item-card";
 import { useParams } from "react-router-dom";
+import { List } from "@mui/material";
 
 const ItemList = () => {
   const { category_name } = useParams();
@@ -18,7 +19,7 @@ const ItemList = () => {
         setAllItems(items);
       });
     }
-  }, []);
+  }, [category_name]);
 
   const allCards = allItems.map((itemObj) => {
     const { item_id, item_name, description, img_url, price, category_name } =
@@ -37,7 +38,7 @@ const ItemList = () => {
     );
   });
 
-  return <ul className='ItemList'>{allCards}</ul>;
+  return <List className='ItemList'>{allCards}</List>;
 };
 
 export default ItemList;

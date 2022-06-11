@@ -1,3 +1,4 @@
+import { List } from "@mui/material";
 import { useState, useEffect } from "react";
 import { fetchAllCategories } from "../api";
 import CategoryCard from "./category-card";
@@ -17,7 +18,7 @@ const CategoryList = () => {
     return <CategoryCard key={category_name} category_name={category_name}/>;
   });
 
-  return <ul className="CategoryList">{allCategoryCards}</ul>;
+  return <List className="CategoryList">{allCategoryCards}</List>;
 };
 
 export default CategoryList;

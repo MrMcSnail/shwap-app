@@ -1,5 +1,6 @@
 import { sellItem } from "../api";
 import { useState } from 'react'
+import { Card } from "@mui/material";
 
 const SellItem = () => {
     const [itemName, setItemName] = useState('');
@@ -24,7 +25,7 @@ const SellItem = () => {
     }
 
     return (
-        <>
+        <Card>
             <form onSubmit={handleSubmit}>
                 <label for="item_name">Item Name: </label>
                 <input type="text" id="item_name" onChange={(event) => setItemName(event.target.value)} value={itemName} /><br />
@@ -38,8 +39,7 @@ const SellItem = () => {
                 <input type="text" id="category_name" onChange={(event) => setCategory(event.target.value)} value={category} /><br />
                 <button type="submit">Sell Item</button>
             </form>
-
-        </>
+        </Card>
     )
 }
 
