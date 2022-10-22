@@ -1,38 +1,42 @@
 html {
-  background-color: #B9D7F0;
+	background-color: #b9d7f0;
 }
 
 .App {
-  text-align: center;
-  background-color: #B9D7F0;
+	text-align: center;
+	background-color: #b9d7f0;
 }
 
 .NavBar {
-  display: flex;
-    align-content: space-between;
-    flex-wrap: wrap;
-    justify-content: space-around;
+	display: flex;
+	align-content: space-between;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 .MuiCard-root {
-  background-color: hsl(0, 0%, 60%);
-  box-shadow: 0 0 20px 20px  hsl(0, 0%, 53%);
+	background-color: hsl(0, 0%, 60%);
+	box-shadow: 0 0 20px 20px hsl(0, 0%, 53%);
 }
 
 .MuiCard-root > img {
- max-width: 300px;
+	max-width: 300px;
+	transform-origin: center center;
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
 }
 
 .MuiList-root {
-  list-style: none;
-    display: flex;
-    align-content: space-between;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    row-gap: 25px;
+	list-style: none;
+	display: flex;
+	align-content: space-between;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	row-gap: 25px;
 }
 
 button.MuiButton-root {
-  background-color: rgb(185, 215, 241);
-  margin: 5px;
+	background-color: rgb(185, 215, 241);
+	margin: 5px;
 }
