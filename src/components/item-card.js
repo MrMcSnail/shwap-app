@@ -18,8 +18,9 @@ export default function ItemCard({
 	useEventListener("mouseleave", offZoom, element);
 
 	function onZoom(e) {
-    const x = e.clientX
-		const y = e.clientY
+    console.log(e)
+    const x = e.clientX - e.offsetX
+		const y = e.clientY - e.offsetY
 		e.srcElement.style.transformOrigin = `${x}px ${y}px`;
 		e.srcElement.style.transform = "scale(1.1)";
 	}
