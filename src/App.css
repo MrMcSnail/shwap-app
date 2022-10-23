@@ -15,16 +15,23 @@ html {
 }
 
 .MuiCard-root {
+	overflow: hidden;
 	background-color: hsl(0, 0%, 60%);
-	box-shadow: 0 0 20px 20px hsl(0, 0%, 53%);
+	box-shadow: 0 0 20px 2px hsl(0, 0%, 53%);
 }
 
-.MuiCard-root > img {
-	max-width: 300px;
-	transform-origin: center center;
-	object-fit: cover;
-	height: 100%;
+.imgContainer {
+	overflow: hidden;
+	height: 300px;
+	width: 300px;
+  
+}
+
+img {
+ object-fit: cover;
+ height: 100%;
 	width: 100%;
+  transform-origin: center center;
 }
 
 .MuiList-root {

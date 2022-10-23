@@ -1,4 +1,5 @@
 import { Card } from "@mui/material";
+import { Container } from "@mui/system";
 import { useEffect, useRef, useState } from "react";
 import useEventListener from "./hooks/useEventListener";
 
@@ -10,14 +11,6 @@ export default function ItemCard({
 	price,
 	category_name,
 }) {
-	const [coords, setCoords] = useState({ x: 0, y: 0 });
-	const [style, setStyle] = useState({
-    'transform-origin': 'center center',
-  'object-fit': 'cover',
-  'height': 100,
-  'width': 100,
-});
-
 	const element = useRef();
 
 	useEventListener("mouseover", onZoom, element);
@@ -25,10 +18,10 @@ export default function ItemCard({
 	useEventListener("mouseleave", offZoom, element);
 
 	function onZoom(e) {
-    const x = e.clientX - e.target.offsetLeft;
-		const y = e.clientY - e.target.offsetTop;
+    const x = e.clientX
+		const y = e.clientY
 		e.srcElement.style.transformOrigin = `${x}px ${y}px`;
-		e.srcElement.style.transform = "scale(1.05)";
+		e.srcElement.style.transform = "scale(1.1)";
 	}
 	function offZoom(e) {
 		e.srcElement.style.transformOrigin = `center center`;
@@ -38,7 +31,9 @@ export default function ItemCard({
 	return (
 		<Card variant='outlined'>
 			<h2>{item_name}</h2>
+      <div className="imgContainer">
 			<img ref={element} src={img_url} alt={item_name} />
+      </div>
 			<h2>£{price}</h2>
 		</Card>
 	);
