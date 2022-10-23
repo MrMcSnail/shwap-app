@@ -1,4 +1,4 @@
-import { Card, IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 import ChairIcon from "@mui/icons-material/Chair";
 import CategoryIcon from "@mui/icons-material/Category";

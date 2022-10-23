@@ -18,11 +18,13 @@ export default function ItemCard({
 	useEventListener("mouseleave", offZoom, element);
 
 	function onZoom(e) {
-    console.log(e)
-    const x = e.clientX - e.offsetX
-		const y = e.clientY - e.offsetY
-		e.srcElement.style.transformOrigin = `${x}px ${y}px`;
-		e.srcElement.style.transform = "scale(1.1)";
+    const {offsetX, offsetY, pageX, pageY, clientX, clientY, layerX, layerY, srcElement} = e;
+    const x = layerX
+		const y = layerY
+    const containerSize = srcElement.width
+    
+		srcElement.style.transformOrigin = `${x}px ${y}px`;
+		srcElement.style.transform = "scale(1.1)";
 	}
 	function offZoom(e) {
 		e.srcElement.style.transformOrigin = `center center`;
