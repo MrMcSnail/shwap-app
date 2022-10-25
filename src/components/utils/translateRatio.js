@@ -1,6 +1,6 @@
-export default function translateRatio(initial) {
-  console.log('initial: ', initial);
-  
-  const result = initial * 2 ;
-  return result
+export default function translateRatio(a, max) {
+  const mid = max/2
+
+  console.log('result: ', ((a-mid)/mid)+1);
+  return;
 }

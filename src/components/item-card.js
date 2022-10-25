@@ -1,7 +1,7 @@
 import { Card } from "@mui/material";
-import { Container } from "@mui/system";
-import { useEffect, useRef, useState } from "react";
+import { useRef, } from "react";
 import useEventListener from "./hooks/useEventListener";
+import translateRatio from "./utils/translateRatio";
 
 export default function ItemCard({
 	item_id,
@@ -18,17 +18,18 @@ export default function ItemCard({
 	useEventListener("mouseleave", offZoom, element);
 
 	function onZoom(e) {
-    const {offsetX, offsetY, pageX, pageY, clientX, clientY, layerX, layerY, srcElement} = e;
+    const {layerX, layerY, srcElement} = e;
     const x = layerX
 		const y = layerY
-    const containerSize = srcElement.width
-    
+    const containerSquareSize = srcElement.width
+    translateRatio(x, containerSquareSize)
 		srcElement.style.transformOrigin = `${x}px ${y}px`;
-		srcElement.style.transform = "scale(1.1)";
+		srcElement.style.transform = "scale(1.025)";
+    srcElement.style.transition = 'transform 1s'
 	}
-	function offZoom(e) {
-		e.srcElement.style.transformOrigin = `center center`;
-		e.srcElement.style.transform = "scale(1)";
+	function offZoom({srcElement: {style}}) {
+		style.transform = "scale(1)";
+    style.transition = 'transform 3s '
 	}
 
 	return (

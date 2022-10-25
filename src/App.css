@@ -1,10 +1,23 @@
+:root {
+  --dove: #045073;
+  --midnight: #3D3D49;
+  --pollen: #DBC769;
+  --oat: #FFFCF3;
+
+}
+
+ a > h1 {
+  color: var(--oat);
+  font-family: fantasy;
+  direction: none;
+ }
 html {
-	background-color: #b9d7f0;
+	background-color: var(--dove);
 }
 
 .App {
 	text-align: center;
-	background-color: #b9d7f0;
+	background-color: var(--dove);
 }
 
 .NavBar {
@@ -16,8 +29,8 @@ html {
 
 .MuiCard-root {
 	overflow: hidden;
-	background-color: hsl(0, 0%, 60%);
-	box-shadow: 0 0 20px 2px hsl(0, 0%, 53%);
+	background-color: var(--oat);
+	box-shadow: 0 0 10px 2px var(--midnight);
 }
 
 .imgContainer {
@@ -42,6 +55,7 @@ img {
 }
 
 button.MuiButton-root {
-	background-color: rgb(185, 215, 241);
+  color: var(--pollen);
+	background-color: var(--midnight);
 	margin: 5px;
 }
