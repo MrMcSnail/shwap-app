@@ -21,15 +21,13 @@ export default function ItemCard({
     const {layerX, layerY, srcElement} = e;
     const x = layerX
 		const y = layerY
-    const containerSquareSize = srcElement.width
-    translateRatio(x, containerSquareSize)
 		srcElement.style.transformOrigin = `${x}px ${y}px`;
 		srcElement.style.transform = "scale(1.025)";
     srcElement.style.transition = 'transform 1s'
 	}
 	function offZoom({srcElement: {style}}) {
 		style.transform = "scale(1)";
-    style.transition = 'transform 3s '
+    style.transition = 'transform 3s'
 	}
 
 	return (
